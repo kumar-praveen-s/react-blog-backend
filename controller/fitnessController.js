@@ -7,9 +7,7 @@ exports.getAllFitnessData = async (req, res) => {
     res.status(200).json({
       status: "success",
       requestedAt: req.requestTime,
-      data: {
-        data,
-      },
+      data:data,
     });
   } catch (err) {
     res.status(404).json({

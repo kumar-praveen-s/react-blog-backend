@@ -7,9 +7,7 @@ exports.getAllTech = async (req, res) => {
     res.status(200).json({
       status: "success",
       requestedAt: req.requestTime,
-      data: {
-        techData,
-      },
+      data: techData,
     });
   } catch (err) {
     res.status(404).json({

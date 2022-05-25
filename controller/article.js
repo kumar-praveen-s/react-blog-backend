@@ -6,9 +6,7 @@ exports.getArticle = async (req, res) => {
 
     res.status(200).json({
       status: "success",
-      data: {
-        article,
-      },
+      data: article,
     });
   } catch (err) {
     res.status(404).json({
