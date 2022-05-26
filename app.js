@@ -5,6 +5,7 @@ const toursRouter = require("./routes/toursRoute");
 const techRouter = require("./routes/technologyRoute");
 const fitnessRoute = require("./routes/fitnessRoute");
 const articleRoute = require("./routes/articleRoute");
+const blogRouter = require("./routes/blogRoute");
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/api/v1/blogdata", blogRouter);
 app.use("/api/v1/tours", toursRouter);
 app.use("/api/v1/technologies", techRouter);
 app.use("/api/v1/fitness", fitnessRoute);
